@@ -1,1 +1,3 @@
-# backend-song-lyrics-finder
+# Backend Song Lyrics Finder
+## Equipe
+- Gabriel Claudino
