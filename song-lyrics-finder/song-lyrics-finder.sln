@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "song-lyrics-finder.API", "song-lyrics-finder.API\song-lyrics-finder.API.csproj", "{8F775609-5713-457D-BF40-2C140BBD9AAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "song-lyrics-finder.API", "song-lyrics-finder.API\song-lyrics-finder.API.csproj", "{8F775609-5713-457D-BF40-2C140BBD9AAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "song-lyrics-finder.DAL", "song-lyrics-finder.DAL\song-lyrics-finder.DAL.csproj", "{6AD2CA66-16D5-4025-9ED6-DAD5F12A10DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "song-lyrics-finder.MODEL", "song-lyrics-finder.MODEL\song-lyrics-finder.MODEL.csproj", "{67BAD6F7-F8FC-4114-8673-17AE01005F80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{8F775609-5713-457D-BF40-2C140BBD9AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F775609-5713-457D-BF40-2C140BBD9AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F775609-5713-457D-BF40-2C140BBD9AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD2CA66-16D5-4025-9ED6-DAD5F12A10DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD2CA66-16D5-4025-9ED6-DAD5F12A10DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD2CA66-16D5-4025-9ED6-DAD5F12A10DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD2CA66-16D5-4025-9ED6-DAD5F12A10DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67BAD6F7-F8FC-4114-8673-17AE01005F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67BAD6F7-F8FC-4114-8673-17AE01005F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67BAD6F7-F8FC-4114-8673-17AE01005F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67BAD6F7-F8FC-4114-8673-17AE01005F80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
