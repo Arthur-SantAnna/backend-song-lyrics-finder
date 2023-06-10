@@ -15,4 +15,9 @@
     <Folder Include="Dtos\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\song-lyrics-finder.BLL\song-lyrics-finder.BLL.csproj" />
+    <ProjectReference Include="..\song-lyrics-finder.MODEL\song-lyrics-finder.MODEL.csproj" />
+  </ItemGroup>
+
 </Project>

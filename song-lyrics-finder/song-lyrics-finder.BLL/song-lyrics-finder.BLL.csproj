@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\song-lyrics-finder.DAL\song-lyrics-finder.DAL.csproj" />
+    <ProjectReference Include="..\song-lyrics-finder.MODEL\song-lyrics-finder.MODEL.csproj" />
+  </ItemGroup>
+
 </Project>

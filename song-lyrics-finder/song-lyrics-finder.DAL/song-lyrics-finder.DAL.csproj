@@ -17,4 +17,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\song-lyrics-finder.MODEL\song-lyrics-finder.MODEL.csproj" />
+  </ItemGroup>
+
 </Project>
