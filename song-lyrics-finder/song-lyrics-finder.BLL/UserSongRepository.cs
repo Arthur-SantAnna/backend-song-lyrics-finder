@@ -9,7 +9,7 @@ using song_lyrics_finder.DAL.DBContext;
 
 namespace song_lyrics_finder.BLL
 {
-    internal class UserSongRepository
+    public class UserSongRepository
     {
         public void Add(UserSong userSong)
         {

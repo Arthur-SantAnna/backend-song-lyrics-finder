@@ -9,7 +9,7 @@ using song_lyrics_finder.MODEL;
 
 namespace song_lyrics_finder.BLL
 {
-    internal class UserRepository
+    public class UserRepository : IUserRepository
     {
         public void Add(User user)
         {

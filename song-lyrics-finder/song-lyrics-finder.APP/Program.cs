@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddDbContext<LyricfinderDBContext>(opt => opt.UseSqlServer("C:\\Users\\arthu\\OneDrive\\Documentos\\pessoal\\projetos\\backend-song-lyrics-finder\\song-lyrics-finder\\song-lyrics-finder.DAL\\Database\\LyricFinderDB.mdf"));
 builder.Services.AddScoped<ISongRepository, SongRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -27,6 +28,13 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors(builder =>
+{
+    builder.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+});
 
 app.MapControllers();
 
