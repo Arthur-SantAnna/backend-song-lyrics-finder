@@ -16,6 +16,42 @@ namespace song_lyrics_finder.APP.Controllers
             _songRepository = songRepository;
         }
 
+
+        [HttpGet]
+        public ActionResult GetSongs(string nickname)
+        {
+            UserRepository userRepository = new UserRepository();
+            List<User> users = userRepository.GetAll();
+            int? userId = 0;
+            foreach (User user in users)
+            {
+                if (user.Nickname == nickname)
+                {
+                    userId = user.UserId;
+                }
+            }
+
+            UserSongRepository userSongRepository = new UserSongRepository();
+            List<UserSong> userSongs = userSongRepository.GetAll();
+            List<int?> songIds = new List<int?>();
+            foreach (UserSong userSong in userSongs)
+            {
+                if (userSong.UserId == userId)
+                {
+                    songIds.Add(userSong.SongId);
+                }
+            }
+
+            List<int> songApiIds = new List<int>();
+            foreach (int? songId in songIds)
+            {
+                songApiIds.Add(_songRepository.GetById(songId.Value).SongApiId);
+            }
+
+            return Ok(songApiIds);
+        }
+
+
         [HttpPost]
         public ActionResult AddSong(CreateUserSong createUserSong)
         {

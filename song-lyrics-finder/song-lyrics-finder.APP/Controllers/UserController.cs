@@ -38,6 +38,7 @@ namespace song_lyrics_finder.APP.Controllers
             }
 
             _userRepository.Add(tempUser);
+
             return Ok(createUser);
         }
     }
