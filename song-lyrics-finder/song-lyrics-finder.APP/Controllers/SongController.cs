@@ -65,6 +65,16 @@ namespace song_lyrics_finder.APP.Controllers
                 Nickname = createUserSong.Nickname
             };
 
+            List<Song> songs = _songRepository.GetAll();
+
+            foreach (Song song in songs)
+            {
+                if (song.SongApiId == tempSong.SongApiId)
+                {
+                    return StatusCode(409);
+                }
+            }
+
             _songRepository.Add(tempSong);
 
             UserRepository userRepository = new UserRepository();
@@ -78,7 +88,6 @@ namespace song_lyrics_finder.APP.Controllers
                 }
             }
 
-            List<Song> songs = _songRepository.GetAll();
             var currentSongId = 0;
             foreach (Song song in songs)
             {
